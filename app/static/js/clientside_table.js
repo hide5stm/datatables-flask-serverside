@@ -6,7 +6,10 @@ $(document).ready(function () {
   $.get('/tables/clientside_table', function (data) {
     $('#clientside_table').DataTable({
       data: data.data,
-      paging: true,
+      paging: false,
+      scrollY: 400,
+      scrollInfinite: true,
+      scrollCollapse: true,
       dom: 'frtipB',
       columns: [
         {"data": "A", "title": "Column A"},

@@ -10,6 +10,9 @@ DATA_SAMPLE = [
     {'A': 'Thanks!', 'B': 'Goodbye.', 'C': 12, 'D': 13}
 ]
 
+
+DATA_SAMPLE *= 10000
+
 class TableBuilder(object):
 
     def collect_data_clientside(self):

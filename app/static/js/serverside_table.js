@@ -4,12 +4,15 @@
 
 $(document).ready(function () {
   $('#serverside_table').DataTable({
-    bProcessing: true,
-    bServerSide: true,
-    sPaginationType: "full_numbers",
-    lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
+    ajaxSource: '/tables/serverside_table',
+    processing: true,
+    serverSide: true,
     bjQueryUI: true,
-    sAjaxSource: '/tables/serverside_table',
+    paging: false,
+    searching:false,
+    scrollY: 400,
+    scrollInfinite: true,
+    scrollCollapse: true,
     columns: [
       {"data": "Column A"},
       {"data": "Column B"},
