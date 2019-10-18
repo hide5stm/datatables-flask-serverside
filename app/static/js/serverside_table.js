@@ -5,12 +5,14 @@
 $(document).ready(function () {
   $('#serverside_table').DataTable({
     ajaxSource: '/tables/serverside_table',
+    info: true,
     processing: true,
     serverSide: true,
     bjQueryUI: true,
-    paging: false,
-    searching:false,
+    paging: true,
+    searching: false,
     scrollY: 400,
+    deferRender: true,
     scrollInfinite: true,
     scrollCollapse: true,
     columns: [
